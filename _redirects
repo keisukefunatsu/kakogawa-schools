@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://quizzical-colden-9aafe3.netlify.com/* http://7890.awe-some.net/:splat 301!
