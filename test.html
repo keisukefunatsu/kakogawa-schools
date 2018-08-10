@@ -1,0 +1,26 @@
+<div class="section">
+    <div class="row columns is-multiline">
+        <div class="column is-one-third" v-for="(school, index) in schools" v-bind:key="index">
+            <div class="card">
+                <div class="card-image">
+                    <figure class="image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content has-text-centered">
+                        <nuxt-link :to="`/school/${school.学校名}`" class="card-footer-item">
+                            {{school.学校名}}
+                        </nuxt-link>
+                        <span v-if="school['男計（人）'] !== null">
+                            男子計：{{school['男計（人）']}}人
+                        </span>
+                        ／
+                        <span v-if="school['女計（人）'] !== null">
+                            女子計：{{school['女計（人）']}}人
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
